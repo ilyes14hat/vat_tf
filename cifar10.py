@@ -35,12 +35,12 @@ from dataset_utils import *
 
 DATA_URL = 'http://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz'
 
-FLAGS = tf.app.flags.FLAGS
-tf.app.flags.DEFINE_string('data_dir', '/tmp/cifar10',
+FLAGS = tf.compat.v1.flags.FLAGS
+tf.compat.v1.flags.DEFINE_string('data_dir', '/tmp/cifar10',
                            'where to store the dataset')
-tf.app.flags.DEFINE_integer('num_labeled_examples', 4000, "The number of labeled examples")
-tf.app.flags.DEFINE_integer('num_valid_examples', 1000, "The number of validation examples")
-tf.app.flags.DEFINE_integer('dataset_seed', 1, "dataset seed")
+tf.compat.v1.flags.DEFINE_integer('num_labeled_examples', 4000, "The number of labeled examples")
+tf.compat.v1.flags.DEFINE_integer('num_valid_examples', 1000, "The number of validation examples")
+tf.compat.v1.flags.DEFINE_integer('dataset_seed', 1, "dataset seed")
 
 # Process images of this size. Note that this differs from the original CIFAR
 # image size of 32 x 32. If one alters this number, then the entire model
