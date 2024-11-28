@@ -3,9 +3,9 @@ import os, sys, pickle
 import numpy as np
 from scipy import linalg
 
-FLAGS = tf.app.flags.FLAGS
-tf.app.flags.DEFINE_bool('aug_trans', False, "")
-tf.app.flags.DEFINE_bool('aug_flip', False, "")
+FLAGS = tf.compat.v1.flags.FLAGS
+tf.compat.v1.flags.DEFINE_bool('aug_trans', False, "")
+tf.compat.v1.flags.DEFINE_bool('aug_flip', False, "")
 
 def unpickle(file):
     fp = open(file, 'rb')
